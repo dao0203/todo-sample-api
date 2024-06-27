@@ -11,8 +11,11 @@ repositories {
 }
 
 dependencies {
+    val logback_version: String by project
+
     testImplementation(kotlin("test"))
     implementation("io.ktor:ktor-server-netty")
+    implementation("ch.qos.logback:logback-classic:$logback_version")
 }
 
 tasks.test {
